@@ -3,13 +3,17 @@
         <h2 class="widget-title"><i class="fa fa-search"></i> <%= __('search') %></h2>
         <%- search_form({'class':'bar-search','text': __('search')}) %>
     </div>
+    <div class="widget-post widget">
+        <h2 class="widget-title"><i class="fa fa-search"></i> <%= __('toolbar.post') %></h2>
+        <%- list_posts({amount: 8}) %>
+    </div>
     <div class="widget-tags widget">
         <h2 class="widget-title"><i class="fa fa-tags"></i> <%= __('tags') %></h2>
-        <%- tagcloud({min_font: 10}) %>
+        <%- tagcloud({min_font: 10, max_font: 20,amount: 50}) %>
     </div>
     <div class="widget-categories widget">
         <h2 class="widget-title"><i class="fa fa-folder-open"></i> <%= __('categories') %></h2>
-        <%- list_categories() %>
+        <%- list_categories({depth: 0}) %>
     </div>
     <div class="light-area"></div>
 </div>
