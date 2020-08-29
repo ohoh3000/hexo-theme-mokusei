@@ -1,0 +1,22 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="<%= config.description %>">
+	<meta name="keywords" content="<%= config.keywords %>">
+	<%
+	var title = [];
+	if (page.current > 1) title.push(__('page', page.current));
+	if (page.title) title.push(page.title);
+	if (page.category) title.push(page.category);
+	if (page.tag) title.push(page.tag);
+	if (page.archive) {
+		if (page.year) title.push(__('archive', page.year + (page.month ? '/' + page.month : '')));
+		else title.push(__('archive'));
+	}
+	title.push(config.title);
+	%><title><%= title.join(' - ') %></title>
+    <link rel="alternate" href="<%- theme.rss ? theme.rss : '' %>" type="application/atom+xml"/>
+	<link rel="shortcut icon" href="<%- theme.favicon ? theme.favicon : '' %>"/>
+	<%- css('css/style') %>
+	<%- css('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') %>
+</head>

@@ -1,0 +1,16 @@
+{
+  "name": "hexo-theme-mokusei",
+  "version": "1.0.0",
+  "description": "A dark theme for hexo",
+  "dependencies": {
+    "hexo": "^3.8.0",
+    "hexo-generator-archive": "^0.1.2",
+    "hexo-generator-category": "^0.1.2",
+    "hexo-generator-index": "^0.1.2",
+    "hexo-generator-tag": "^0.1.1",
+    "hexo-renderer-ejs": "^0.3.0",
+    "hexo-renderer-marked": "^0.3.0",
+    "hexo-renderer-stylus": "^0.3.0",
+    "hexo-server": "^0.2.0"
+  }
+}

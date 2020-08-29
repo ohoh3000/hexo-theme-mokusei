@@ -1,0 +1,176 @@
+// ------------------------------
+// 文章内页
+// ------------------------------
+
+.article-inner
+    margin-bottom 0px !important
+    .article-head
+        padding 50px 100px
+        text-align center
+        color #333
+        position relative
+        overflow hidden
+        @extend .textShadow
+        .article-title
+            font-size $column_text_size
+            color #ffffff
+            padding 0
+        .head-meta 
+            li
+                color #ffffff
+                font-size 14px
+                i
+                    padding-right 5px
+    .inner-con
+        overflow hidden
+        .article-wrap
+            margin $wrap_margin
+        .tags-list
+            margin-top 40px
+            a
+                font-size $textSize
+                font-style italic
+
+.article-navgition
+    margin-top 40px
+    border(top)
+    .navgition-prev
+        text-align left
+    .navgition-next
+        text-align right
+    .navgition-wrap
+        display flex
+        > div
+            flex 1
+            padding 20px 40px
+            float left
+            transition(background-color)
+            &:hover
+                background-color $themeColor
+                a
+                    color #fff
+        &:after
+            content ""
+            display block
+            clear both
+    .navgition-title
+        font-size $textSize
+        font-weight normal
+        color $textColor
+        a
+            color $textColor
+
+.article-description
+.article-inner-con
+    font-size $textSize
+    line-height 150%
+    color $textColor
+    letter-spacing 0.5px
+    p
+        margin 10px 0px
+        word-break break-all
+    h1, h2, h3, h4, h5,h6
+        margin 40px 0px
+        padding-bottom 20px
+        border(bottom)
+    h1
+        font-size 2em
+    h2
+        font-size 1.5em
+    h3
+        font-size 1.2em
+    blockquote
+        border(left, 1px solid $themeColor)
+        background-color rgba(0,0,0,0.1)
+        font-size 14px
+        padding 10px 20px
+        margin 20px 0px
+        overflow auto
+    a
+        color $textColor
+        text-decoration underline
+    ul
+    ol
+        padding-left 20px
+    li
+        list-style square
+    .highlight
+    code
+        border()
+        font-size 0.8em
+        background-color rgba(0,0,0,0.1)
+        padding 5px 10px
+        overflow auto
+    .highlight
+        margin 20px 0px
+        .gutter
+            color #ccc
+            padding-right 10px
+        table
+            width auto
+            text-indent 0px
+            td
+            th
+                border(all, none)
+    code
+        margin 10px
+    hr
+        border(all, none)
+        background-color $borderColor 
+        height 1px
+    img
+        display block
+        border-radius 2px
+        max-width 100%
+        margin auto
+        @extend .transition
+        opacity 0.8
+        &:hover
+            opacity 1
+    table
+        width 100%
+        border-collapse collapse
+        text-indent 20px
+        td
+        th
+            padding 5px 0px
+            border()
+        th
+            background rgba(0,0,0,0.1)
+            color #fff
+            text-align left
+            text-indent 20px
+
+.article-dirname
+    position absolute
+    top 0
+    right 0
+    width 250px
+    height 100%
+    background $barLeftColor
+    border(left, 1px solid #0a0a0a)
+    overflow auto
+    .dirname-list
+        a
+            display block
+            padding 20px 30px
+            font-size $textSize
+            color #606060
+            overflow : hidden;
+            text-overflow : ellipsis;
+            white-space : nowrap;
+            border(bottom, 1px solid #1d1d1d)
+            &.active
+                font-weight bold
+                color $textColor
+    .dirname-title
+        font-size 20px
+        padding 40px 30px
+        border(bottom, 1px solid #1d1d1d)
+    .dirname-list-level-1
+        > a
+            font-weight bold
+            font-size 18px
+    .dirname-list-child
+        text-indent 20px
+

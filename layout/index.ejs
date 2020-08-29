@@ -1,0 +1,12 @@
+<div class="con-wrap fadeToTop">
+    <section class="article-area">
+        <% page.posts.each(function(item){ %>
+            <%- partial('_partial/article', {item: item}) %>
+        <% }) %>
+    </section>
+    <section class="tool-area">
+        <%- partial('_partial/toolbar') %>
+    </section>
+</div>
+<%- partial('_partial/pagination') %>
+

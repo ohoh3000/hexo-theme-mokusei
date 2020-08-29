@@ -1,0 +1,13 @@
+<div class="column-head extra-padding" id="<%- theme.ifsparticle ? 'fallEle' : ''%>" style="background-image: url(<%- theme.banner %>)">
+    <h2 class="column-title fadeToBottom">
+        <%= page.tag %>
+    </h2>
+</div>
+<div id="con-wrap">
+    <div class="content fadeToTop">
+        <% page.posts.each(function(item){ %>
+            <%- partial('_partial/article', {item: item}) %>
+        <% }) %>
+    </div>
+</div>
+<%- partial('_partial/pagination') %>

@@ -1,0 +1,7 @@
+<% if (page.tocifs){ %>
+    <div class="article-dirname">
+        <h2 class="dirname-title"><%= __('catelog') %></a></h2>
+        <%- toc(page.content,{class: "dirname-list"}) %>
+        <div class="light-area"></div>
+    </div>
+<% } %>

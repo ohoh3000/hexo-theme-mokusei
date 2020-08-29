@@ -1,0 +1,63 @@
+<article class="article article-inner cl">
+    <%
+        if(!item.title) item.title = "Empty title";
+        var letter = item.title.substr(0, 1);
+    %>
+    <% if(item.photos.length){ %>
+    <div class="article-head extra-padding" id="<%- theme.ifsparticle ? 'fallEle' : ''%>" style="background-image:url('<%= item.photos[0] %>')">
+        <div class="head-wrap fadeToBottom">
+            <h2 class="article-title">
+                <%- item.title %>
+            </h2>
+            <ul class="head-meta">
+                <li><i class="fa fa-calendar"></i> <%= item.date.format(config.date_format) %></li>
+            </ul>
+        </div>
+    <% }else{ %>
+    <div class="article-head extra-padding" id="<%- theme.ifsparticle ? 'fallEle' : '' %>"  style="background-image:url(/imgs/head.jpg)">
+        <div class="head-wrap fadeToBottom">
+            <h2 class="article-title">
+                <%- item.title %>
+            </h2>
+            <ul class="head-meta">
+                <li><i class="fa fa-calendar"></i> <%= item.date.format(config.date_format) %></li>
+            </ul>
+        </div>
+    <% } %>
+    </div>
+    <div class="article-block">
+        <div class="inner-con fadeToTop">
+            <div class="article-wrap cl">
+                <div class="article-inner-con">
+                    <%- item.content %>
+                </div>
+                <ul class="tags-list cl">
+                    <%
+                        for(var i=0; i< item.tags.data.length; i++){
+                    %>
+                        <li><a href="/tags/<%= item.tags.data[i].name %>">#<%= item.tags.data[i].name %></a></li>
+                    <%
+                        }
+                    %>
+                </ul>
+                <%- partial('_partial/comment') %>
+            </div>
+        </div>
+    </div>
+    <div class="article-navgition">
+        <div class="navgition-wrap">
+            <% if(item.prev){ %>
+                <div class="navgition-prev">
+                    <h2 class="navgition-title"><i class="fa fa-chevron-left"></i> <a href="<%- url_for(item.prev.path) %>"> <%- item.prev.title ? item.prev.title : 'Empty title' %> </a></h2>
+                    <p class="navgition-description"></p>
+                </div>
+            <% } %>
+            <% if(item.next){ %>
+                <div class="navgition-next">
+                    <h2 class="navgition-title"><a href="<%- url_for(item.next.path) %>"> <%- item.next.title ? item.next.title : 'Empty title' %> </a> <i class="fa fa-chevron-right"></i></h2>
+                    <p class="navgition-description"></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,34 @@
+// ------------------------------
+// 归档页样式
+// ------------------------------
+
+.archive-year
+    font-size 32px
+    margin 60px 0px
+    color $text_color
+    span.year-block
+    span.year-info
+        display inline-block
+    span.year-block
+        width 50px
+        height 25px
+        background-color $themeColor
+    span.year-info
+        margin-left -20px
+
+.article-archive
+    .archive-title
+        height 50px
+        line-height 50px
+        font-weight normal
+        overflow : hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        a
+            font-size $text_size
+            color $text_color
+            &:hover
+                text-decoration underline
+        border(bottom)
+        span.article-time
+            float right

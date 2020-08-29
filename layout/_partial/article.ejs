@@ -1,0 +1,46 @@
+<article class="article">
+    <div class="article-wrap">
+        <h2 class="article-title cl">
+            <a href="<%- config.root %><%- item.path %>" title="<%- item.title ? item.title : __('article.emptyTitle') %>">
+                <%- item.title ? item.title : __('article.emptyTitle') %>
+            </a>
+        </h2>
+        <ul class="article-extra">
+            <li class="article-time">
+                <%= item.date.format(config.date_format) %>
+            </li>
+            <li class="article-category">
+                <% if (item.categories.data.length > 0) { %>
+                <ol class="category-list cl">
+                    <i class="fa fa-folder-o"></i>
+                    <%for(var i=0; i< item.categories.data.length; i++){%>
+                        <li><a href="/categories/<%= item.categories.data[i].name %>/"><%= item.categories.data[i].name %></a></li>
+                    <%}%>
+                </ol>
+                <% } else { %>
+                
+                <% } %> 
+            </li>
+
+
+        </ul>
+        <div class="article-description">
+            <%
+                var str;
+                if(item.excerpt)
+                    str = item.excerpt;
+                else
+                    str = item.content;
+            %>
+            <%- str %>
+        </div>
+        <a href="<%- config.root %><%- item.path %>" class="more-link"><%= __('more') %> &gt;&gt;</a>
+        <!-- <div class="article-tags">
+            <ul class="tags-list cl">
+                <%for(var i=0; i< item.tags.data.length; i++){%>
+                <li><a href="/tags/<%= item.tags.data[i].name %>/"><i class="fa fa-tag"></i><%= item.tags.data[i].name %></a></li>
+                <%}%>
+            </ul>
+        </div> -->
+    </div>
+</article>

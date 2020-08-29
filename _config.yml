@@ -1,0 +1,45 @@
+# site
+name: mokusei
+description: This is a hexo theme
+favicon:
+banner: /imgs/head.jpg
+rss:  
+
+# navigation
+menu:
+  主页:
+    url: /
+    icon: home
+    iconType: fa
+  归档:
+    url: /archives/
+  关于:
+    url: none
+    child:
+        联系方式: 
+          url: /contact
+        关于本站:
+          url: /about
+
+# Social account
+account:
+  github:
+    url: /1
+    icon: github
+    iconType: fa
+  mail:
+    url: /2
+    icon: envelope
+    iconType: fa
+  twitter:
+    url: /3
+    icon: twitter
+    iconType: fa
+
+  # Comment system
+comment:
+  disqus:
+    shortname:  
+  
+  # Features
+ifsparticle:  true

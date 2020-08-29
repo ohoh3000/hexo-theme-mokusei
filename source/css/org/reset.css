@@ -1,0 +1,18 @@
+
+html, body ,div, h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, form, input, a, article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, pre, blockquote { margin: 0; padding: 0 }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+img{ border: none; }
+li { list-style-type: none }
+a { text-decoration: none; outline: none}
+a:hover { text-decoration: none; }
+body { font-family: "Microsoft YaHei", sans-serif;}
+code,pre,input { font-family: "Microsoft YaHei", sans-serif; }
+
+.fl{ float: left; }
+.fr {float: right;}
+.cl::after {content: ""; display: block; clear: both;}
+.clear { clear: both }
+

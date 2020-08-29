@@ -1,0 +1,76 @@
+// ------------------------------
+// 左边栏
+// ------------------------------
+
+.nav
+    background-color $navBgColor
+    font-size 14px
+    position relative
+    padding 20px 40px
+    z-index 100
+    .nav-list
+        float left
+        text-align center
+        > li
+            margin 0px 5px
+            display inline-block
+            dl
+                background-color $navBgColor
+                display none
+                position absolute
+                z-index 1
+                a
+                    border-radius 0
+                    font-size 12px
+            &:hover
+                > dl
+                    display block
+            a
+                display block
+                padding 8px 15px
+                color $navTextColor
+                @extend .transition
+                border-radius 3px
+                // border-right 1px solid #2d2d2d
+                &.active
+                    color #fff
+                    font-weight bold
+                    background-color $themeColor
+                &:hover
+                    color #fff
+                    font-weight bold
+                    background-color $navLinkScolor
+    .nav-tool
+        float right
+        margin-top 5px
+        li
+            display inline-block
+            a
+                color $navTextColor
+                font-size 18px
+                padding 8px 10px
+                border-radius 3px
+                &:hover
+                    color #fff
+                    background-color $navLinkScolor
+    .nav-search
+        clear both
+        display none
+        overflow hidden
+        padding-top 10px
+        .nav-search-input
+            outline none
+            width 100%
+            background #0a0a0a
+            border none 
+            font-size 16px
+            padding 10px 0px
+            color #fff
+            text-align center
+
+
+
+
+
+
+
