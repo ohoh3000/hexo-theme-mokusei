@@ -1,6 +1,9 @@
 article:
   emptyTitle: 空标题
 
+toolbar:
+  post: 近期文章
+
 search: 搜索
 tags: 标签
 categories: 分类
