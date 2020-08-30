@@ -15,19 +15,19 @@
 
 .main-con
     width 1200px
-    margin auto
+    margin 40px auto
     overflow hidden
     background $articleAreaColor
     .con-wrap
         display flex
-        margin 40px
+        margin $commonMargin
         .article-area
             flex 1
             margin-right 40px
         .tool-area
             width 300px
     .article
-        background-color #0a0a0a
+        background-color $articleAreaBlockColor
         padding 15px 30px
         margin-bottom 40px
         border-radius 3px
@@ -89,21 +89,20 @@
                     color #fff
                     text-decoration none
     .pagination
-        margin $wrap_margin
+        margin $commonMargin
         .current
             background-color $themeColor
-            border(all, 1px solid $themeColor)
+            color #fff
         span
         a
             display inline-block
-            font-size 14px
-            padding 10px 20px
-            border()
+            font-size 18px
+            padding 15px 20px
             color $textColor
             @extend .transition
             &:hover
                 background-color $themeColor
-                color $textColor
+                color #fff
 .fadeToBottom
     animation fadeToBottom 0.8s ease-out
 @keyframes fadeToBottom {

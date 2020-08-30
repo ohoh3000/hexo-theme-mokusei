@@ -11,10 +11,13 @@
             </li>
             <li class="article-category">
                 <% if (item.categories.data.length > 0) { %>
+                    <%- console.log(item.categories.data)%>
                 <ol class="category-list cl">
                     <i class="fa fa-folder-o"></i>
                     <%for(var i=0; i< item.categories.data.length; i++){%>
+                        <% if(!item.categories.data[i].parent) { %>
                         <li><a href="/categories/<%= item.categories.data[i].name %>/"><%= item.categories.data[i].name %></a></li>
+                        <% } %>
                     <%}%>
                 </ol>
                 <% } else { %>
