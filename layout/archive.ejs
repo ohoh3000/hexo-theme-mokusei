@@ -1,10 +1,6 @@
-<div class="column-head extra-padding" id="<%- theme.ifsparticle ? 'fallEle' : ''%>" style="background-image: url(<%- theme.banner %>)">
-    <h2 class="column-title fadeToBottom">
-        <%= __('archive') %>
-    </h2>
-</div>
-<div id="con-wrap">
-    <div class="content fadeToTop">
+
+<div class="con-wrap fadeToTop archive">
+    <div class="content article-area">
         <% var old, year %>
         <% page.posts.sort('date', 'desc').each(function(post) { %>
             <%
@@ -12,12 +8,16 @@
                 if(old != year){
                     old = year;
             %>
-                <div class="archive-year"><span class="year-block"></span><span class="year-info"><%= year %></span></div>
+                <div class="archive-year"><span class="year-block"><%= year %></span></div>
+
             <%
                 }
             %>
-            <%- partial('_partial/article-archive.ejs', {item: post}) %>
+            <%- partial('_partial/article.ejs', {item: post}) %>
         <% }); %>
     </div>
+    <section class="tool-area">
+        <%- partial('_partial/toolbar') %>
+    </section>
 </div>
 <%- partial('_partial/pagination') %>

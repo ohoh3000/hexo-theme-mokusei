@@ -1,1 +1,8 @@
-<%- partial('_partial/article-inner', {item: page}) %>
+<div class="con-wrap fadeToTop">
+    <div class="content article-area">
+        <%- partial('_partial/article', {item: page}) %>
+    </div>
+    <section class="tool-area">
+        <%- partial('_partial/toolbar') %>
+    </section>
+</div>

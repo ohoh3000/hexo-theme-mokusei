@@ -11,7 +11,6 @@
             </li>
             <li class="article-category">
                 <% if (item.categories.data.length > 0) { %>
-                    <%- console.log(item.categories.data)%>
                 <ol class="category-list cl">
                     <i class="fa fa-folder-o"></i>
                     <%for(var i=0; i< item.categories.data.length; i++){%>
@@ -30,14 +29,19 @@
         <div class="article-description">
             <%
                 var str;
-                if(item.excerpt)
-                    str = item.excerpt;
-                else
+                if(is_post())
                     str = item.content;
+                else
+                    if(item.excerpt)
+                        str = item.excerpt;
+                    else
+                        str = item.content;
             %>
             <%- str %>
         </div>
+        <% if(!is_post()) { %>
         <a href="<%- config.root %><%- item.path %>" class="more-link"><%= __('more') %> &gt;&gt;</a>
+        <% } %>
         <!-- <div class="article-tags">
             <ul class="tags-list cl">
                 <%for(var i=0; i< item.tags.data.length; i++){%>

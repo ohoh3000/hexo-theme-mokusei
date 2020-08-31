@@ -1,13 +1,15 @@
-<div class="column-head extra-padding" id="<%- theme.ifsparticle ? 'fallEle' : ''%>" style="background-image: url(<%- theme.banner %>)">
-    <h2 class="column-title fadeToBottom">
-        <%= page.tag %>
-    </h2>
+<div class="column-title">
+    <h3><span class="title-info"><%= __('article.tag') %></span> <%= page.tag %></h3>
 </div>
-<div id="con-wrap">
-    <div class="content fadeToTop">
+
+<div class="con-wrap fadeToTop">
+    <div class="content article-area">
         <% page.posts.each(function(item){ %>
             <%- partial('_partial/article', {item: item}) %>
         <% }) %>
     </div>
+    <section class="tool-area">
+        <%- partial('_partial/toolbar') %>
+    </section>
 </div>
 <%- partial('_partial/pagination') %>

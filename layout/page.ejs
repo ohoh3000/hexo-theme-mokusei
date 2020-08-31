@@ -1,3 +1,12 @@
-<div class="content">
-    <%- partial('_partial/article-page.ejs', {item: page}) %>
+<div class="column-title">
+    <h3><%= page.title %></h3>
+</div>
+
+<div class="con-wrap fadeToTop">
+    <div class="article-area">
+        <%- partial('_partial/article-page.ejs', {item: page}) %>
+    </div>
+    <section class="tool-area">
+        <%- partial('_partial/toolbar') %>
+    </section>
 </div>

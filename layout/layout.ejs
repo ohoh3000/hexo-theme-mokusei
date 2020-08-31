@@ -17,16 +17,7 @@
         <%- partial('_partial/footer',{}, {cache: true}) %>
         <%- partial('_partial/extend',{}, {cache: true}) %>
 	</div>
-	<% if(is_home()||is_archive()||is_category()||is_tag()){ %>
-		
-	<% }else{ %>
-		<% if (page.tocifs){ %>
-			<%- partial('_partial/toolbar_post') %>
-		<% }else{ %>
-			<%- partial('_partial/toolbar') %>
-		<% } %>
-    <% } %>
-    
+
 	<%- js('js/org/jquery.min.js') %>
     <%- js('js/extend.js') %>
 </body>
