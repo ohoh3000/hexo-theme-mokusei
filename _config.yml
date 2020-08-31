@@ -14,7 +14,7 @@ menu:
   归档:
     url: /archives/
   关于:
-    url: none
+    url: /about/
     child:
         联系方式: 
           url: /contact
