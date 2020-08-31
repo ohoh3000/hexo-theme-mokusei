@@ -1,12 +1,14 @@
 article:
   emptyTitle: 空标题
+  categories: 分类
+  tag: 标签
 
 toolbar:
   post: 近期文章
 
 search: 搜索
 tags: 标签
-categories: 分类
+
 focusMode: 专注模式
 returnTop: 返回顶部
 more: 更多
