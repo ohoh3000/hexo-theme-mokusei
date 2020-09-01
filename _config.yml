@@ -1,4 +1,5 @@
 # site
+# 站点设置
 name: mokusei
 description: This is a hexo theme
 favicon:
@@ -6,6 +7,7 @@ banner: /imgs/head.jpg
 rss:  
 
 # navigation
+# 导航
 menu:
   主页:
     url: /
@@ -14,32 +16,40 @@ menu:
   归档:
     url: /archives/
   关于:
-    url: /about/
+    url: none
     child:
-        联系方式: 
-          url: /contact
         关于本站:
           url: /about
 
 # Social account
+# 社交图标
 account:
   github:
-    url: /1
+    url: /github
     icon: github
     iconType: fa
   mail:
-    url: /2
+    url: /mail
     icon: envelope
     iconType: fa
   twitter:
-    url: /3
+    url: /twitter
     icon: twitter
     iconType: fa
 
-  # Comment system
+# layout
+# 布局
+layout:
+  columnPosition: 1
+
+
+
+# Comment system
+# 评论
 comment:
   disqus:
-    shortname:  
-  
-  # Features
+    shortname: 
+
+# Features
+# 粒子特效开关
 ifsparticle:  true
