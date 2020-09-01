@@ -2,17 +2,13 @@ article:
   emptyTitle: 空标题
   categories: 分类
   tag: 标签
-
+  more: 阅读更多
 toolbar:
   post: 近期文章
-
-search: 搜索
-tags: 标签
-
-focusMode: 专注模式
+  tag: 标签
+  categories: 分类
+  search: 搜索
 returnTop: 返回顶部
-more: 更多
 prev: 上一页
 next: 下一页
-archive: 归档
-catelog: 目录
+
