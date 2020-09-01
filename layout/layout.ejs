@@ -8,10 +8,6 @@
         <%- partial('_partial/nav') %>
         <%- partial('_partial/top',{}, {cache: true}) %>
 
-		<% if(!is_home()){ %>
-			<%- partial('_partial/media_menu.ejs') %>
-        <% } %>
-
         <%- body %>
     
         <%- partial('_partial/footer',{}, {cache: true}) %>
