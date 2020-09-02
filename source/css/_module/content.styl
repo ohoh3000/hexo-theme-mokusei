@@ -20,13 +20,13 @@
             display block
             clear both
         margin $commonMargin
+        display flex
+        justify-content space-between
         .article-area
-            width 780px
-            margin-right 40px
-            float left
+            flex 1
         .tool-area
+            margin-left 40px
             width 300px
-            float right
     .article
         background-color $articleAreaBlockColor
         padding 15px 30px
@@ -126,6 +126,11 @@
             height 1px
         pre
             overflow auto
+            white-space pre-wrap
+            white-space -moz-pre-wrap
+            white-space -pre-wrap
+            white-space -o-pre-wrap
+            word-wrap: break-word
         img
             display block
             border-radius 3px
@@ -197,10 +202,9 @@
             &.pagination-next
                 text-align right
     .pagination
-        margin $commonMargin
         .current
             background-color $themeColor
-            color #fff
+            color $textColor
         span
         a
             display inline-block
@@ -210,7 +214,7 @@
             @extend .transition
             &:hover
                 background-color $themeColor
-                color #fff
+                color $textColor
 .fadeToBottom
     animation fadeToBottom 0.8s ease-out
 @keyframes fadeToBottom {
