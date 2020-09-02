@@ -41,8 +41,28 @@ account:
 # 布局
 layout:
   columnPosition: 1
+  headSearchIcon: 1
 
+# sidebar widget
+# 边栏小工具
+toolbar:
+  displaySwitch: 1
+  position:
+    searchWidget: 0
+    postWidget: 1
+    tagsWidget: 2
+    categoriesWidget: 3
+  display:
+    searchWidget: 0
+    postWidget: 1
+    tagsWidget: 1
+    categoriesWidget: 1
 
+# article
+# 文章相关
+article:
+  dateSwitch: 1
+  categoriesSwitch: 1
 
 # Comment system
 # 评论
