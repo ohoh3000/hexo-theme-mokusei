@@ -1,10 +1,15 @@
-search: Recherche
-tags: Étiquette
-categories: Classification
-focusMode: Mode de mise au point
-returnTop: Haut de la page
-more: Plus
-prev: Précédent
-next: Suivant
-archive: Archive
-catelog: Répertoire
+article:
+  emptyTitle: Titre vide
+  categories: catégories
+  tag: marque
+  more: plus
+toolbar:
+  post: Articles récents
+  tag: marque
+  categories: catégories
+  search: chercher
+returnTop: Retour au sommet
+prev: Page précédente
+next: Page suivante
+page: page
+archive: Archiver

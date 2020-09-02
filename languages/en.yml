@@ -1,10 +1,15 @@
-search: search
-tags: tags
-categories: categories
-focusMode: focus mode
+article:
+  emptyTitle: Empty title
+  categories: Categories
+  tag: Tag
+  more: More
+toolbar:
+  post: Recent articles
+  tag: Tag
+  categories: Categories
+  search: Search
 returnTop: Back to top
-more: more
 prev: prev
 next: next
-archive: archive
-catelog: catelog
+page: page
+archive: Archive

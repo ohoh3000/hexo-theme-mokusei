@@ -1,10 +1,15 @@
-search: 검색
-tags: 레이블
-categories: 분류
-focusMode: 초점 모드
+article:
+  emptyTitle: 빈 제목
+  categories: 카테고리
+  tag: 꼬리표
+  more: 더
+toolbar:
+  post: 최근 기사
+  tag: 꼬리표
+  categories: 카테고리
+  search: 검색
 returnTop: 맨 위로
-more: 기타
 prev: 이전
 next: 다음
+page: 페이지
 archive: 아카이브
-catelog: 디렉토리

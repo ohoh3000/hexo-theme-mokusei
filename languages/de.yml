@@ -1,11 +1,15 @@
-
-search: Suche
-tags: Label
-categories: Klassifizierung
-focusMode: Fokusmodus
-returnTop: Nach oben
-more: Mehr
-prev: Zurück
-next: Weiter
+article:
+  emptyTitle: Titel leeren
+  categories: Einstufung
+  tag: Etikette
+  more: Mehr
+toolbar:
+  post: Aktuelle Artikel
+  tag: Etikette
+  categories: Einstufung
+  search: suchen nach
+returnTop: Zurück nach oben
+prev: Vorherige Seite
+next: Nächste Seite
+page: Seite
 archive: Archiv
-catelog: Verzeichnis

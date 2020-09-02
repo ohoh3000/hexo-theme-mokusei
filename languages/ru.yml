@@ -1,10 +1,15 @@
-search: поиск
-tags: тег
-categories: классификация
-focusMode: Режим фокусировки
-returnTop: Вернуться к началу
-more: более
-prev: предыдущий
-next: следующий
-archive: файл
-catelog: каталог
+article:
+  emptyTitle: пустой заголовок
+  categories: категория
+  tag: метка
+  more: больше
+toolbar:
+  post: последние статьи 
+  tag: метка
+  categories: категория
+  search: поиск
+returnTop: очень понравилось
+prev: Предыдущая страница
+next: След
+page: страница
+archive: Архив

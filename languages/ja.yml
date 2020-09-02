@@ -1,10 +1,15 @@
-search: 検索する
-tags: ラベル
-categories: 分類
-focusMode: フォーカスモード
-returnTop: 上に戻る
-more: もっと
-prev: 前の
-next: 次へ
+article:
+  emptyTitle: 空のタイトル
+  categories: カテゴリー
+  tag: ラベル
+  more: もっと
+toolbar:
+  post: 最近の記事
+  tag: ラベル
+  categories: カテゴリー
+  search: 検索する
+returnTop: トップに戻る
+prev: 前へ
+next: 次
+page: ページ
 archive: アーカイブ
-catelog: ディレクトリ
