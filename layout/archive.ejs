@@ -1,6 +1,10 @@
 
 <div class="con-wrap fadeToTop archive">
-    <div class="content article-area">
+    <% if(!theme.layout.columnPosition) { %>
+    <section class="article-area" style="order: 1; margin-right: 0; margin-left: 40px;">
+    <% } else { %>
+    <section class="article-area">
+    <% } %>
         <% var old, year %>
         <% page.posts.sort('date', 'desc').each(function(post) { %>
             <%
@@ -15,9 +19,7 @@
             %>
             <%- partial('_partial/article.ejs', {item: post}) %>
         <% }); %>
-    </div>
-    <section class="tool-area">
-        <%- partial('_partial/toolbar') %>
+        <%- partial('_partial/pagination') %>
     </section>
+    <%- partial('_partial/toolbar') %>
 </div>
-<%- partial('_partial/pagination') %>

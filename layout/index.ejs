@@ -1,13 +1,20 @@
 <div class="con-wrap fadeToTop">
+    <% if(!theme.layout.columnPosition) { %>
+    <section class="article-area" style="order: 1; margin-right: 0; margin-left: 40px;">
+    <% } else { %>
+
+        
+
     <section class="article-area">
+    <% } %>
         <% page.posts.each(function(item){ %>
             <%- partial('_partial/article', {item: item}) %>
         <% }) %>
+        <%- partial('_partial/pagination') %>
     </section>
-    <section class="tool-area">
-        <%- partial('_partial/toolbar') %>
-    </section>
+    <%- partial('_partial/toolbar') %>
+
 </div>
-<%- partial('_partial/pagination') %>
+
 
 

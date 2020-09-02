@@ -1,12 +1,20 @@
 <div class="column-title fadeToTop">
-    <h3><%= page.title %></h3>
+    <h3><span class="title-info"><%= __('page') %></span> <%= page.title %> </h3>
 </div>
 
 <div class="con-wrap fadeToTop">
-    <div class="article-area">
-        <%- partial('_partial/article-page.ejs', {item: page}) %>
-    </div>
-    <section class="tool-area">
-        <%- partial('_partial/toolbar') %>
+    <% if(!theme.layout.columnPosition) { %>
+    <section class="article-area" style="order: 1; margin-right: 0; margin-left: 40px;">
+    <% } else { %>
+    <section class="article-area">
+    <% } %>
+        <article class="article cl">
+            <div class="article-wrap">
+                <div class="article-description">
+                    <%- page.content %>
+                </div>
+            </div>
+        </article>
     </section>
+    <%- partial('_partial/toolbar') %>
 </div>

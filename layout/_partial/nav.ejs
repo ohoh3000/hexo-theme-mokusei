@@ -39,11 +39,13 @@
                 </a>
             </li>
         <% } %>
+        <% if (theme.layout.headSearchIcon) { %>
         <li>
             <a href="javascript:void(0)" class="nav-search-btn">
                 <i class="fa fa-search"></i>
             </a>
         </li>
+        <% } %>
     </ul>
     <%- search_form({'class':'nav-search','text': __('search...')}) %>
 </div>

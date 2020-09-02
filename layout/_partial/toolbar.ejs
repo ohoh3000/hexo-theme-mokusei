@@ -1,18 +1,36 @@
-<div class="toolbar">
-    <!-- <div class="widget-search widget">
-        <h2 class="widget-title"><i class="fa fa-search"></i> <%= __('toolbar.search') %></h2>
-        <%- search_form({'class':'bar-search','text': __('search')}) %>
-    </div> -->
-    <div class="widget-post widget">
-        <h2 class="widget-title"><i class="fa fa-file-text"></i> <%= __('toolbar.post') %></h2>
-        <%- list_posts({amount: 8}) %>
+<% if ( theme.toolbar.displaySwitch ) { %>
+<section class="tool-area">
+<% } else { %>
+<section class="tool-area" style="display: none;">
+<% } %>
+    <div class="toolbar">
+        <% if ( theme.toolbar.display.searchWidget ) { %>
+        <div class="widget-search widget" style="order: <%- theme.toolbar.position.searchWidget ? theme.toolbar.position.searchWidget : '0' %> ">
+            <h2 class="widget-title"><i class="fa fa-search"></i> <%= __('toolbar.search') %></h2>
+            <%- search_form({'class':'bar-search','text': __('search')}) %>
+        </div>
+        <% } %>
+
+        <% if ( theme.toolbar.display.postWidget ) { %>
+        <div class="widget-post widget" style="order: <%- theme.toolbar.position.postWidget ? theme.toolbar.position.postWidget : '0' %> ">
+            <h2 class="widget-title"><i class="fa fa-file-text"></i> <%= __('toolbar.post') %></h2>
+            <%- list_posts({amount: 8}) %>
+        </div>
+        <% } %>
+
+        <% if ( theme.toolbar.display.tagsWidget ) { %>
+        <div class="widget-tags widget" style="order: <%- theme.toolbar.position.tagsWidget ? theme.toolbar.position.tagsWidget : '0' %> ">
+            <h2 class="widget-title"><i class="fa fa-tags"></i> <%= __('toolbar.tag') %></h2>
+            <%- tagcloud({min_font: 10, max_font: 20,amount: 50}) %>
+        </div>
+        <% } %>
+
+        <% if ( theme.toolbar.display.categoriesWidget ) { %>
+        <div class="widget-categories widget" style="order: <%- theme.toolbar.position.categoriesWidget ? theme.toolbar.position.categoriesWidget : '0' %> ">
+            <h2 class="widget-title"><i class="fa fa-folder-open"></i> <%= __('toolbar.categories') %></h2>
+            <%- list_categories({depth: 0}) %>
+        </div>
+        <% } %>
+
     </div>
-    <div class="widget-tags widget">
-        <h2 class="widget-title"><i class="fa fa-tags"></i> <%= __('toolbar.tag') %></h2>
-        <%- tagcloud({min_font: 10, max_font: 20,amount: 50}) %>
-    </div>
-    <div class="widget-categories widget">
-        <h2 class="widget-title"><i class="fa fa-folder-open"></i> <%= __('toolbar.categories') %></h2>
-        <%- list_categories({depth: 0}) %>
-    </div>
-</div>
+</section>
