@@ -57,23 +57,22 @@
         overflow hidden
         font-size 28px
         font-weight bold
-        color $textColor
+        color $themeColor
         a
             font-size 28px
             font-weight bold
-            color $textColor
+            color $themeColor
             &:hover
                 text-decoration underline
     .article-description
         font-size $textSize
-        line-height 150%
+        line-height 160%
         color $textColorDes
-        letter-spacing 0.5px
         p
             margin 10px 0px
             word-break break-all
         h1, h2, h3, h4, h5,h6
-            margin 20px 0px
+            margin 40px 0px
         h1
             font-size 2.4em
         h2
@@ -87,7 +86,7 @@
         h6
             font-size 1em
         blockquote
-            border(left, 1px solid $themeColor)
+            border-left 1px solid $themeColor
             background-color rgba(0,0,0,0.1)
             font-size 14px
             padding 10px 20px
@@ -101,14 +100,14 @@
             padding-left 20px
         li
             list-style square
-        .highlight
         code
-            font-size 0.9em
-            padding 5px 10px
+            font-size 1em
             overflow auto
-        .highlight
+            background-color rgba(0,0,0,0.2)
+        .hljs
+            font-size 0.9em
             margin 20px 0px
-            padding 0px 20px
+            padding 10px
             background-color rgba(0,0,0,0.2)
             .gutter
                 width 10px
@@ -121,12 +120,12 @@
                 background-color $themeColor
             &::-webkit-scrollbar-button
                 background-color $themeColor
-        code
-            margin 10px
         hr
             border none
             background-color $borderColor 
             height 1px
+        pre
+            overflow auto
         img
             display block
             border-radius 3px
@@ -139,41 +138,64 @@
         table
             width 100%
             border-collapse collapse
+            overflow auto
+            margin 20px 0px
             td
             th
                 padding 5px 0px
-                border()
+                border 1px solid $borderColor
+                text-align center
             th
                 background rgba(0,0,0,0.1)
-                color #fff
-                text-align left
-                text-indent 20px
-
+                color $textColor
     .more-link
-        color $themeColor
-        display block
+        color $textColorDes
+        border 1px solid $textColorDes
+        display inline-block
+        padding 5px 10px
         margin 20px 0px
+        font-size 14px
         &:hover
-            text-decoration underline
+            border 1px solid $themeColor
+            color $themeColor
     .tags-list
         margin-top 20px
         display inline-block
         li
             float left
-            margin 0px 15px 15px 0px
+            margin 0px 10px 10px 0px
             a
                 display block
                 font-size 12px
-                padding 5px 15px
+                padding 5px 10px
                 @extend .transition
                 background-color rgba(0,0,0,0.2)
-                color #aaa
+                color $textColorDes
                 i
                     padding-right 5px
                 &:hover
                     background-color $themeColor
-                    color #fff
+                    color $textColor
                     text-decoration none
+    .article-pagination
+        margin 40px 0px
+        font-size 16px
+        display flex
+        a
+            display block
+            color $textColor
+            padding 10px 15px
+            background-color rgba(0,0,0,0.2)
+            border-bottom 1px solid $themeColor
+            @extend .transition
+
+        > div
+            flex 1
+            &.pagination-prev
+                text-align left
+                margin-right 20px
+            &.pagination-next
+                text-align right
     .pagination
         margin $commonMargin
         .current

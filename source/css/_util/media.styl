@@ -1,39 +1,57 @@
-// ------------------------------
-// 多端响应适配
-// ------------------------------
 
 @media screen and (max-width:960px)
-    html
-    body
-        height auto
-    .extra-padding
-        padding-top 80px !important
-    .sidebar
-        width 200px
-        display block
-        position absolute
-        left 0
-        top 0
-        z-index 1
-        height 100%
-        > ul
-            > li
-                a
-                    padding-left 0px
-                    padding-right 0px
-                    text-align center
+    .archive-year
+        text-align center
     .main-con
         width 100%
         margin 0px
         position relative
         z-index 20
-        #con-wrap
-            margin $wrap_margin_media
-            overflow hidden
+        overflow visible
+        .column-title
+            margin 40px 10px
+            text-align center
+        .nav
+            background-color $bodyBgColor
+            display block
+            padding 0px
+            position absolute
+            left -200px
+            width 200px
+            .nav-list
+                float none
+                display block
+                width 100%
+                li
+                    dl
+                        position static
+            .nav-tool
+                float none
+                display block
+                width 100%
+            li
+                display block
+                margin 0
+                a
+                    display block
+                    border-bottom 1px solid $borderColor
+                    border-radius 0px
+                    text-align left
+                    padding 10px 30px
+        .con-wrap
+            margin 10px
+            .article-area
+                float none
+                width 100%
+            .tool-area
+                float none
+                width 100%
+                .widget
+                    margin-bottom 10px
+        .article
+            margin-bottom 10px
         .pagination
-            margin $wrap_margin_media
-        .footer
-            padding $wrap_margin_media
+            margin 40px 10px
         .top
             .top-info
                 padding 20px

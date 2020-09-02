@@ -2,29 +2,25 @@ function Extend(){}
 
 Extend.prototype = {
     "init": function(){
-        // this.showBar();
-        this.menuDown();
-        this.light();
+        this.showBar();
         this.fall();
-        this.scrollAddEvent();
         this.mediaMenu();
         this.searchToggle();
     },
     "showBar": function(){
         var oEle = $("#extend-tools");
-        var oFrame = $(".main-con");
-        oFrame.scroll(function(){
+        $(document).scroll(function(){
             if($(this).scrollTop() > 100)
                 oEle.fadeIn();
             else
                 oEle.fadeOut();
         });
-        this.returnTop(oEle, oFrame);
+        this.returnTop(oEle);
     },
-    "returnTop": function(oEle, oFrame){
+    "returnTop": function(oEle){
         var button = oEle.find(".tools-returnTop");
         button.on("click",function(){
-            oFrame.animate({scrollTop: 0}, 200);
+            $("html, body").animate({scrollTop: 0}, 200);
         })
     },
     "fall": function() {
@@ -75,83 +71,6 @@ Extend.prototype = {
         }
         draw();
     },
-    "menuDown": function() {
-        var oEle = $(".sidebar > ul > li");
-        oEle.on("click", function () {
-            $(this).find("> a").addClass("active");
-            $(this).siblings("li").find(">a").removeClass("active");
-            if($(this).find(".drop-flag").hasClass("fa-angle-up")){
-                $(this).find(".drop-flag").addClass("fa-angle-down").removeClass("fa-angle-up");
-            }else{
-                $(this).find(".drop-flag").addClass("fa-angle-up").removeClass("fa-angle-down");
-            }
-            $(this).find("ul").slideToggle();
-        });
-    },
-    "light": function() {
-        var eleButton = $("#light-button");
-        var eleArea = $(".light-area");
-        var ifs = 0;
-        if(!sessionStorage.getItem('lightFlag')){
-            ifs = 1;
-        }else{
-            ifs = 0;
-            eleArea.show();
-            $(".toorbar").css("overflow","hidden");
-            $(".article-dirname").css("overflow","hidden");
-            $(".sidebar").css("overflow","hidden");
-        }
-        eleButton.on("click", function () {
-            if(ifs){
-                eleArea.fadeIn();
-                sessionStorage.setItem("lightFlag",1);
-                $(".toorbar").css("overflow","hidden");
-                $(".article-dirname").css("overflow","hidden");
-                $(".sidebar").css("overflow","hidden");
-                ifs = 0;
-            }else{
-                eleArea.fadeOut();
-                sessionStorage.removeItem('lightFlag');
-                $(".toorbar").css("overflow","auto");
-                $(".article-dirname").css("overflow","auto");
-                $(".sidebar").css("overflow","auto");
-                ifs = 1;
-            }
-        })
-    },
-    "scrollAddEvent": function () {
-        var box = $(".main-con");
-        var items = $(".headerlink");
-        var buttons = $(".dirname-list a");
-        var topData = [];
-        var scrTop;
-        items.each(function(index,item){
-            topData.push($(this).offset().top);
-        });
-        box.on("scroll",function () {
-            scrTop = box.scrollTop();
-            if(box.is(":animated"))
-                return;
-            for(var i =0; i<topData.length; i++){
-                if(scrTop > topData[topData.length-1]) {
-                    buttons.removeClass("active");
-                    buttons.eq(topData.length-1).addClass("active");
-                }else{
-                    if (scrTop >= topData[i] && scrTop < topData[i + 1]) {
-                        buttons.removeClass("active");
-                        buttons.eq(i).addClass("active");
-                    }
-                }
-            }
-        });
-        buttons.on("click",function () {
-            buttons.removeClass("active");
-            $(this).addClass("active");
-            box.animate({
-                "scrollTop": topData[buttons.index($(this))] +50
-            })
-        });
-    },
     "mediaMenu": function () {
         var eleButton = $("#media-toggle");
         var eleMain = $(".main-con");
@@ -162,10 +81,6 @@ Extend.prototype = {
                     'left': '200px'
                 });
                 eleButton.css("transform","rotate(90deg)");
-                $("html,body").css({
-                    "height": "100%",
-                    "overflow": "hidden"
-                });
                 ifs = true;
             }else{
                 eleMain.animate({

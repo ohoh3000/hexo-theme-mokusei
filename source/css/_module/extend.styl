@@ -1,30 +1,14 @@
-// ------------------------------
-// 右下角工具栏
-// ------------------------------
-
 .extend-tools
     position fixed
-    bottom 30px
-    right 270px
+    bottom 0px
+    right 0px
     li
-        padding 15px
+        padding 20px
         cursor pointer
-        transition()
+        @extend .transition
+        background-color #151515
         font-size 20px
-        border()
         position relative
         &:hover
             background-color $themeColor
-            border(all, 1px dotted $themeColor)
-            color #fff
-        &.tools-closeLight
-            border(bottom,none)
-
-.light-area
-    position absolute
-    left 0px
-    top 0px
-    width 100%
-    height 100%
-    background-color #171717
-    display none
+            color $textColor
