@@ -1,10 +1,8 @@
 # mokusei
-简单纯净的深色双栏响应式博客主题，运行在Hexo系统下
 
-[预览](https://iengu.github.io)   
+[Preview](https://iengu.github.io)   
 
-### 安装
-
+## Install
 ```
 git clone --depth=1 https://github.com/iengu/hexo-theme-mokusei.git themes/mokusei
 ```
@@ -15,14 +13,14 @@ _config.yml
 + theme: mokusei
 ```
 
-### 更新
+## Update
 
 ```
 cd themes/mokusei
 git pull origin master
 ```
 
-### 配置
+## Config
 
 ```yaml
 # 站点设置
@@ -111,14 +109,7 @@ menu:
         关于本站:
           url: /about
 ```
-#### 图标自定义
+#### icon diy
 主题图标使用第三方图标库 [font-awesome](https://fontawesome.com/)，更改主题配置选项内的<code>icontype</code>选项，值为对应在font-awesome的图标名。
 
-### 贡献
-
-期待你的贡献！
-
-### 问题提交
-
-[ISSUE](https://github.com/iengu/hexo-theme-mokusei/issues)
 
