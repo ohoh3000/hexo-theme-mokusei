@@ -1,111 +1,126 @@
-<h1 align="center">Mokusei</h1>
-<p align="center">桂花是一个深色的Hexo主题，它致力于提供安静的阅读环境</p>
+<h1 align="center">mokusei</h1>
+<p align="center"></p>
+<p align="center">简单纯净的深色双栏响应式博客主题，运行在Hexo系统下</p>
 
-[Preview](https://blog.shijukun.com)   
-[English document](./doc/en/README.md) 
+[预览](https://iengu.github.io)   
 
 ## 安装
 
 ```
-git clone https://github.com/shijuuu/hexo-theme-mokusei.git themes/Mokusei
+git clone --depth=1 https://github.com/iengu/hexo-theme-mokusei.git themes/mokusei
 ```
-修改位于博客根目录下的<code>_config.yml</code>内的<code>theme</code>选项值为<code>Mokusei</code>
+```
+_config.yml
+
+- theme: other themes
++ theme: mokusei
+```
 
 ## 更新
 
 ```
 cd themes/mokusei
-git pull
+git pull origin master
 ```
 
 ## 特征
 
-* 三栏布局
-* 评论系统（Disqus）
 * 图标自定义
 * 社交账号设置
-* 文章目录（滚动监听）
-* 专注模式
-* 文章封面
 * 粒子动画
 * 多语言（国际化）
 
-## 多语言
-
-主题支持11个国家的语言，默认语言为中文。
-更改语言请修改位于博客根目录下的<code>_config.yml</code>内<code>language</code>选项
-
-## 主题配置
+## 配置
 
 ```yaml
 # 站点设置
-name: 站点名称
-description: 站点描述
-favicon: 地址栏图标
-banner: 头图
-rss:  
-# 导航设置
+name: mokusei  
+description: This is a hexo theme 
+favicon: 
+banner: /imgs/head.jpg
+rss: 
+
+# 导航栏
 menu:
-  Home:
+  主页:
     url: /
     icon: home
     iconType: fa
-  Archives:
+  归档:
     url: /archives/
-    icon: archive
-    iconType: fa
-# 社交账号设置
+  关于:
+    url: none
+    child:
+        关于本站:
+          url: /about
+
+# 社交图标
 account:
   github:
-    url: /
+    url: /github
     icon: github
     iconType: fa
+  mail:
+    url: /mail
+    icon: envelope
+    iconType: fa
   twitter:
-    url: /
+    url: /twitter
     icon: twitter
     iconType: fa
-# 评论系统
+
+# 以下配置中的1为开启，0为关闭
+
+# 布局
+layout:
+  columnPosition: 1 #边栏放置位置，默认右边，0为左边
+  headSearchIcon: 1 #导航栏是否显示搜索图标
+
+# 边栏小工具
+toolbar:
+  displaySwitch: 1 #是否显示边栏
+  # 边栏各个小工具排列顺序，数字越大排在后面
+  position:
+    searchWidget: 0
+    postWidget: 1
+    tagsWidget: 2
+    categoriesWidget: 3
+  # 边栏各个小工具是否显示开关
+  display:
+    searchWidget: 0
+    postWidget: 1
+    tagsWidget: 1
+    categoriesWidget: 1
+
+# 文章相关
+article:
+  dateSwitch: 1 #是否显示文章日期
+  categoriesSwitch: 1 #是否显示文章分类
+  tagSwitch: 1 #是否显示文章标签
+
+# disqus评论
 comment:
   disqus:
-    shortname:  
-# 功能开关
-ifsparticle:  false   # 是否显示粒子动画
-```
+    shortname: 
 
-## 主题功能配置
-
-### 开启文章目录
-
-编辑文章的MD文件，在头部加上<code>tocifs: true</code> ，如下：
+# 粒子特效开关
+ifsparticle:  1
 
 ```
----
-title: article title
-date: 2019-01-21 09:28:48
-tocifs: true
----
+
+## 特性配置
+
+### 导航栏二级下拉菜单（child关键字）
 ```
-
-### 设置文章封面
-
-编辑文章的MD文件，在头部加上<code>photos</code>，如下：
-
+menu:
+  关于:
+    url: none
+    child:
+        关于本站:
+          url: /about
 ```
----
-title: article
-date: 2019-01-21 09:28:48
-photos:
-- "image url"
----
-```
-
-## 第三方库
-
-* 使用了[jQuery.NiceScroll](https://github.com/inuyaksa/jquery.nicescroll)
-
-## 参考
-
-参考了<code>clean-blog</code> 和 <code>landscape</code> 主题, 感谢！
+### 图标自定义
+主题图标使用第三方图标库 [font-awesome](https://fontawesome.com/)，更改主题配置选项内的<code>icontype</code>选项，值为对应在font-awesome的图标名。
 
 ## 贡献
 
@@ -113,8 +128,5 @@ photos:
 
 ## 问题提交
 
-[ISSUE](https://github.com/shijuuu/hexo-theme-mokusei/issues/)
+[ISSUE](https://github.com/iengu/hexo-theme-mokusei/issues)
 
-## 其他
-
-主题内使用图片素材均来自网络，如有侵犯了您的权利，请告知删除。
