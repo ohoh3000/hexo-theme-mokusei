@@ -55,6 +55,7 @@
             <% } %>
         <% } %>
         <% if(is_post()) { %>
+        <% if (theme.article.tagSwitch) { %>
         <div class="article-tags">
             <ul class="tags-list cl">
                 <%for(var i=0; i< item.tags.data.length; i++){%>
@@ -62,6 +63,7 @@
                 <%}%>
             </ul>
         </div>
+        <% } %>
         <div class="article-pagination cl">
         <% if(item.prev){ %>
             <div class="pagination-prev">
