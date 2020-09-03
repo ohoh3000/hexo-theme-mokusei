@@ -15,9 +15,8 @@ _config.yml
 - theme: other themes
 + theme: mokusei
 ```
-* 主题内详细配置请见：[wiki](https://github.com/iengu/hexo-theme-mokusei/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6_config.yml)
-* 关于代码高亮
-  * 更改博客配置文件_config.yml为以下推荐配置
+* 关于代码高亮 <br/>
+更改博客配置文件_config.yml为以下推荐配置
 ```
 _config.yml
 
@@ -34,6 +33,7 @@ prismjs:
   line_number: true
   tab_replace: ''
 ```
+* 主题内详细配置请见：[wiki](https://github.com/iengu/hexo-theme-mokusei/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6_config.yml)
 * 更新主题
 ```
 cd themes/mokusei
