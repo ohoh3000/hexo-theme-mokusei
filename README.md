@@ -15,10 +15,11 @@ _config.yml
 - theme: other themes
 + theme: mokusei
 ```
+* 主题内详细配置请见：[wiki](https://github.com/iengu/hexo-theme-mokusei/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6_config.yml)
 * 更新主题
 ```
 cd themes/mokusei
 git pull origin master
 ```
-* 主题内详细配置请见：[wiki](https://github.com/iengu/hexo-theme-mokusei/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6_config.yml)
+
 
