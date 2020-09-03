@@ -1,13 +1,11 @@
-# site
 # 站点设置
-name: mokusei
-description: This is a hexo theme
-favicon:
+name: mokusei  
+description: This is a hexo theme 
+favicon: 
 banner: /imgs/head.jpg
-rss:  
+rss: 
 
-# navigation
-# 导航
+# 导航栏
 menu:
   主页:
     url: /
@@ -21,7 +19,6 @@ menu:
         关于本站:
           url: /about
 
-# Social account
 # 社交图标
 account:
   github:
@@ -37,39 +34,39 @@ account:
     icon: twitter
     iconType: fa
 
-# layout
+# 以下配置中的1为开启，0为关闭
+
 # 布局
 layout:
-  columnPosition: 1
-  headSearchIcon: 1
+  columnPosition: 1 #边栏放置位置，默认右边，0为左边
+  headSearchIcon: 1 #导航栏是否显示搜索图标
 
-# sidebar widget
 # 边栏小工具
 toolbar:
-  displaySwitch: 1
+  displaySwitch: 1 #是否显示边栏
+  # 边栏各个小工具排列顺序，数字越大排在后面
   position:
     searchWidget: 0
     postWidget: 1
     tagsWidget: 2
     categoriesWidget: 3
+  # 边栏各个小工具是否显示开关
   display:
     searchWidget: 0
     postWidget: 1
     tagsWidget: 1
     categoriesWidget: 1
 
-# article
 # 文章相关
 article:
-  dateSwitch: 1
-  categoriesSwitch: 1
+  dateSwitch: 1 #是否显示文章日期
+  categoriesSwitch: 1 #是否显示文章分类
+  tagSwitch: 1 #是否显示文章标签
 
-# Comment system
-# 评论
+# disqus评论
 comment:
   disqus:
     shortname: 
 
-# Features
 # 粒子特效开关
-ifsparticle:  true
+ifsparticle:  1
