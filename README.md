@@ -22,13 +22,6 @@ cd themes/mokusei
 git pull origin master
 ```
 
-### 特征
-
-* 图标自定义
-* 社交账号设置
-* 粒子动画
-* 多语言（国际化）
-
 ### 配置
 
 ```yaml
