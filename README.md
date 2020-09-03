@@ -1,8 +1,9 @@
-# mokusei
+预览地址：[https://iengu.github.io](https://iengu.github.io)   
 
-[Preview](https://iengu.github.io)   
+### 主题介绍
+一个基于Hexo博客系统下个人博客主题，全站自适应双栏布局，深色色块板块区分，风格简单干净，整体现代感较强，适合科技/技术类文字型个人博客使用。
 
-## Install
+
 ```
 git clone --depth=1 https://github.com/iengu/hexo-theme-mokusei.git themes/mokusei
 ```
