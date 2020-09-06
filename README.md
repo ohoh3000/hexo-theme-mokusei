@@ -15,8 +15,7 @@ _config.yml
 - theme: other themes
 + theme: mokusei
 ```
-* 关于代码高亮 <br/>
-更改博客配置文件_config.yml为以下推荐配置
+* 关于代码高亮  (更改博客配置文件_config.yml为以下推荐配置)
 ```
 _config.yml
 
